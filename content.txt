@@ -13,5 +13,9 @@ ambient provides you with information about the people who are around you right 
 # Surfacing Unknown Connections
 See in what unknown and unexpected ways you are connected with the people around you. Do you like the same music? Do you have common friends? Do you speak the same language? And much more.
 
-# 
+# We take privacy seriously
+You're information is only shared with the people who are in the same location at the same time. We never reveal your exact location. Moreover, you are in complete control over what you want to share, when and with whom.
+
+# We're keeping an eye out for you - even when you're too busy
+How often you've been sitting next to somebody who could have become a good friend, a business partner, or future husband even maybe - and you don't know because - well - you can't talk to anybody, right? That's why we 
 
