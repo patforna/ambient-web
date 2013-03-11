@@ -1,22 +1,109 @@
+h2, h3 {
+  font-family: 'Satisfy', cursive;
+}
 
+hr {
+  margin: 10px;
+}
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+}
 
+.jumbotron {
+  margin: 60px 0;
+  text-align: center;
+}
+.jumbotron .lead {
+  font-size: 24px;
+  line-height: 1.25;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
 
+.logo {
+  margin-bottom: 25px;
+}
 
+.feature {
+  margin: 40px 0;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+footer {
+background: #292727;
+margin: 0;
+padding: 20px 0 0;
+color: #ccc
+}
+footer h3 {
+color: white;
+margin: 0 0 10px 0
+}
+footer .social-networks a {
+display: inline-block;
+margin: 10px 10px 0 0;
+padding: 4px 0 0 0;
+font-size: 22px;
+border-radius: 50%;
+-moz-border-radius: 50%;
+-webkit-border-radius: 50%;
+text-align: center;
+width: 32px;
+height: 30px;
+line-height: 24px;
+background: #222;
+text-decoration: none;
+color: #fff;
+-webkit-transition: all .3s;
+-moz-transition: all .3s;
+-o-transition: all .3s;
+-ms-transition: all .3s;
+transition: all .3s
+}
+footer .social-networks .icon-facebook,footer .social-networks a {
+border: 3px solid #3b5998
+}
+footer .social-networks .icon-facebook:hover {
+background: #3b5998
+}
+footer .social-networks .icon-github {
+border: 3px solid #a9cf54
+}
+footer .social-networks .icon-github:hover {
+background: #a9cf54
+}
+footer .social-networks .icon-pinterest {
+border: 3px solid #de2c6c
+}
+footer .social-networks .icon-pinterest:hover {
+background: #de2c6c
+}
+footer .social-networks .icon-twitter {
+border: 3px solid #31cdfd
+}
+footer .social-networks .icon-twitter:hover {
+background: #31cdfd
+}
+footer .social-networks .icon-google-plus {
+border: 3px solid #c9402e
+}
+footer .social-networks .icon-google-plus:hover {
+background: #c9402e
+}
+footer .social-networks a:hover {
+background: #000;
+color: #fff
+}
+#footer-extra {
+background: #1c1c1c;
+padding: 10px 0;
+font-size: .9em;
+color: #999
+}
+#footer-extra i {
+color: #afdbea
+}
 
