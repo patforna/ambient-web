@@ -1,3 +1,7 @@
+.hidden {
+  display: none;
+}
+
 h2, h3 {
   font-family: 'Satisfy', cursive;
 }
@@ -40,6 +44,10 @@ a.icon:hover{
   text-decoration:none;    
 }
 
+.viral-url {
+  margin-top: 10px;
+}
+
 /* TWITTER BOOTSTRAP OVERRIDES */
 .input-large {
   width: 210px;
@@ -48,6 +56,10 @@ a.icon:hover{
   line-height: 30px;
   padding: 11px 19px;
   font-size: 17.5px;
+}
+
+.uneditable-input {
+  cursor: auto;
 }
 
 /* FOOTER */

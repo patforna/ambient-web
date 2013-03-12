@@ -15,11 +15,22 @@
     <p class="lead">We think that bumping into somebody by pure chance doesn't happen often enough. We've all enjoyed chance encounters. Friends, colleagues, even future husbands . But how often have we been sitting next to somebody else who had that same potential - and we simply didn't realise? Too often, we think, and that's why we're building ambient.</p>
   </div>
 
-  <div class="text-center">
-    <form method="post" action="/signups" class="form-inline">
+  <div class="call-to-action text-center">
+    <form method="post" action="/signups" class="form-inline<% if (@thanks) %> hidden<% end%>" >
       <input type="email" name="email" required placeholder="enter@email.com" class="input-xlarge">
       <input type="submit" value="Get Invited!" class="btn btn-success">
     </form>
+    <% if (@thanks) %>
+    <div class="alert alert-block alert-success fade in">
+      <button type="button" class="close" data-dismiss="alert">×</button>
+      <h4 class="alert-heading">Thank You!</h4>
+      <p>For every friend you get to sign up, we'll move you 5 slots forward. Just copy/paste the URL below into Twitter, Facebook or in an email:</p>
+      <div class="viral-url input-append">
+        <span class="input-xlarge uneditable-input">http://discoverambient.com/4yc3Xf</span>
+        <button type="button" class="btn btn-success">Copy</button>
+      </div>  
+    </div>
+    <% end %>        
   </div>
 
   <hr>

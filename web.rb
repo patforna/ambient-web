@@ -19,9 +19,19 @@ get '/' do
   erb :index
 end
 
+get '/4yc3Xf' do
+  redirect to('/')
+end
+
+get '/thanks' do
+  @thanks = true
+  erb :index
+end
+
+
 post '/signups' do
   settings.db.insert({ :email => params[:email] })
-  redirect to('/')
+  redirect to('/thanks')
 end
 
 get '/internal/signups' do
