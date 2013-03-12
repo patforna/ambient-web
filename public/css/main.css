@@ -53,24 +53,24 @@ a.icon:hover{
 /* FOOTER */
 
 footer {
-background: #292727;
-margin: 0;
-padding: 20px 0 0;
-color: #ccc
+  background: #292727;
+  margin: 0;
+  padding: 20px 0 0;
+  color: #ccc
 }
 footer h3 {
-color: white;
-margin: 0 0 10px 0
+  color: white;
+  margin: 0 0 10px 0
 }
 
 #footer-extra {
-background: #1c1c1c;
-padding: 10px 0;
-font-size: .9em;
-color: #999
+  background: #1c1c1c;
+  padding: 10px 0;
+  font-size: .9em;
+  color: #999
 }
-#footer-extra i {
-color: #afdbea
+#footer-extra a {
+  color: #999
 }
 
 /* INTERNAL SIGNUPS */
