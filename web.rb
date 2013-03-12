@@ -16,5 +16,16 @@ configure :production do
 end
 
 get '/' do
-  send_file File.join(settings.public_folder, 'index.html')
+  erb :index
 end
+
+post '/signups' do
+  settings.db.insert({ :email => params[:email] })
+  redirect to('/')
+end
+
+get '/internal/signups' do
+  @signups = settings.db.find.to_a
+  erb :signups
+end
+
