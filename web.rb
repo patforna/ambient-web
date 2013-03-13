@@ -8,6 +8,7 @@ configure :development do
 end
 
 configure :production do
+    require 'newrelic_rpm'
     db_uri = URI.parse(ENV['MONGOHQ_URL'])
     db_name = db_uri.path.gsub(/^\//, '')
     db_connection = Mongo::Connection.new(db_uri.host, db_uri.port).db(db_name)
