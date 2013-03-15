@@ -17,12 +17,12 @@ hr {
 
 .jumbotron {
   margin: 40px 0;
-  text-align: center;
 }
 
 .jumbotron .lead {
   font-size: 24px;
   line-height: 1.25;
+  text-align: left;  
 }
 
 .jumbotron .btn {
