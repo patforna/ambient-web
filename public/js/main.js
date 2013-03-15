@@ -1,8 +1,10 @@
-$('.call-to-action form').submit(function(event){
-
+$(document).on('submit', '.call-to-action form', function(event) {
+  
+    var callToActionBox = $(this).parent()
+  
     $.post(this.action, $(this).serialize(), function(response) {
-      var snippet = $(response).find('.call-to-action');
-      $('.call-to-action').replaceWith(snippet);
+      var snippet = $($(response).find('.call-to-action')).first();
+      callToActionBox.replaceWith(snippet);
     })
 
     return false;

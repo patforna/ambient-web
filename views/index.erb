@@ -14,23 +14,8 @@
     <h1>A new way to connect with the people around you.</h1>
     <p class="lead">Chance encounters happen.  But only by chance.  What if it were possible to make these connections happen more often by removing the element of chance?  How many times have we been sitting near someone who, through a simple conversation could spark our interest, make our day or even change the course of our lives?  Often enough, it seems.  Yet everyday thousands of these potential connections don’t happen, because ‘chance’ didn’t have it’s way.  That’s why we’re building ambient.</p>
   </div>
-
-  <div class="call-to-action text-center">
-    <form method="post" action="/signups" class="form-inline<% if (@thanks) %> hidden<% end%>" >
-      <input type="email" name="email" required placeholder="enter@email.com" class="input-xlarge">
-      <input type="submit" value="Get Invited!" class="btn btn-success btn-large">
-    </form>
-    <% if (@thanks) %>
-    <div class="alert alert-block alert-success fade in">
-      <button type="button" class="close" data-dismiss="alert">×</button>
-      <h4 class="alert-heading">Thank You!</h4>
-      <h5>Want Priority Access?</h5>
-      <p>Get early access by inviting at least 3 friends. The more friends you invite, the sooner you'll get access :)</p>
-      <p>Just copy/paste the URL below into Twitter, Facebook or in an e-mail:</p>
-      <span class="viral-url input-xlarge uneditable-input">http://discoverambient.com/4yc3Xf</span>
-    </div>
-    <% end %>        
-  </div>
+  
+  <%= erb(:call_to_action, :layout => false) %>
 
   <hr>
 
@@ -79,9 +64,12 @@
     <div class="span6 lead">
       <h2>Be the first one to know</h2>
       <p>We're working hard to fill people’s lives with serendipity but we're not quite there yet.  As soon as we are, we’ll let you know so that you can bring more serendipity to your life.  Sign up below.</p>
-      <a class="btn btn-large btn-success" href="#">Get Invited</a>
     </div>
   </div>      
+  
+  <hr>  
+  
+  <%= erb(:call_to_action, :layout => false) %>  
 
 </div>
 

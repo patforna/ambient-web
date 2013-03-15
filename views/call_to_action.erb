@@ -1,0 +1,16 @@
+<div class="call-to-action text-center">
+  <form method="post" action="/signups" class="form-inline<% if (@thanks) %> hidden<% end%>" >
+    <input type="email" name="email" required placeholder="enter@email.com" class="input-xlarge">
+    <input type="submit" value="Get Invited!" class="btn btn-success btn-large">
+  </form>
+  <% if (@thanks) %>
+  <div class="alert alert-block alert-success fade in">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <h4 class="alert-heading">Thank You!</h4>
+    <h5>Want Priority Access?</h5>
+    <p>Get early access by inviting at least 3 friends. The more friends you invite, the sooner you'll get access :)</p>
+    <p>Just copy/paste the URL below into Twitter, Facebook or in an e-mail:</p>
+    <span class="viral-url input-xlarge uneditable-input">http://discoverambient.com/4yc3Xf</span>
+  </div>
+  <% end %>        
+</div>
