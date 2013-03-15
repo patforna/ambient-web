@@ -2,7 +2,7 @@
   display: none;
 }
 
-h2, h3 {
+h1, h2, h3 {
   font-family: 'Satisfy', cursive;
 }
 
@@ -19,10 +19,12 @@ hr {
   margin: 40px 0;
   text-align: center;
 }
+
 .jumbotron .lead {
   font-size: 24px;
   line-height: 1.25;
 }
+
 .jumbotron .btn {
   font-size: 21px;
   padding: 14px 24px;
