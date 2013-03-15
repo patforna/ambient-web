@@ -46,17 +46,37 @@ a.icon:hover{
   text-decoration:none;    
 }
 
-.viral-url {
-  margin-top: 10px;
+/* --- call to action --- */
+
+.call-to-action .prompt {  
+  padding-top: 10px;
+  padding-bottom: 25px;  
+  background: #292727;
+  margin-bottom: 10px;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;  
 }
 
-/* TWITTER BOOTSTRAP OVERRIDES */
+.call-to-action .prompt h3 {  
+  font-family: inherit;  
+  color: white;
+  margin: 0;
+}
+
+.call-to-action .lead {
+  font-size: 18px;
+  font-style: italic;
+  color: #999;
+  margin-bottom: 10px;
+}
+
 input[class=input-xlarge] {
-  width: 400px;
+  width: 350px;
   height: 30px;
   line-height: 30px;
-  padding: 13px 12px;
-  font-size: 28px;
+  padding: 8px 12px;
+  font-size: 22px;
   -webkit-border-radius: 6px;
      -moz-border-radius: 6px;
           border-radius: 6px;
@@ -64,15 +84,24 @@ input[class=input-xlarge] {
 
 .btn-large {
   line-height: 30px;
-  padding: 13px 12px;
-  font-size: 28px;
+  padding: 8px 12px;
+  font-size: 22px;
+}
+
+.form-inline {
+  margin: 0;
 }
 
 .uneditable-input {
   cursor: auto;
 }
 
-/* FOOTER */
+.viral-url {
+  margin-top: 10px;
+}
+
+
+/* --- footer --- */
 
 footer {
   background: #292727;
@@ -95,7 +124,8 @@ footer h3 {
   color: #999
 }
 
-/* INTERNAL SIGNUPS */
+/* --- internal --- */
+
 td.time {
   width: 180px;
 }
