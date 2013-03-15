@@ -36,7 +36,7 @@ post '/signups' do
 end
 
 get '/internal/signups' do
-  @signups = settings.db.find.to_a
+  @signups = settings.db.find.sort({:_id => 1})
   erb :signups
 end
 
