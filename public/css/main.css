@@ -6,7 +6,7 @@ body {
   display: none;
 }
 
-body, input {
+body, input, button, textarea {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
 }
@@ -143,6 +143,13 @@ input[class=input-xlarge] {
   background: #616596;  
 }
 
+.btn-cancel {
+  line-height: 30px;
+  padding: 8px 12px;
+  font-size: 22px;
+}
+
+
 .form-inline {
   margin: 0;
 }
@@ -213,14 +220,20 @@ input[class=input-xlarge] {
 
 footer {
   background: #292727;
-  margin: 0;
-  padding: 10px 0 0;
-  color: #ccc
 }
 
 footer h3 {
+  margin: 5px 0;    
   color: white;
-  margin: 0 0 10px 0
+}
+
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  color: white;
+  text-decoration: none;
 }
 
 #footer-extra {
@@ -230,13 +243,31 @@ footer h3 {
   font-size: .9em;
   color: #999
 }
-#footer-extra a {
-  color: #999
+
+/* --- contact us modal box --- */
+#contact-us-modal h3 { 
+  font-size: 30px; 
+  margin: 10px 0;
+  color: #ea2b25;
 }
 
-/* --- internal --- */
-
-td.time {
-  width: 180px;
+.modal-header .lead {
+  margin-bottom: 0;
 }
 
+.modal-body .input-xlarge {
+  width: 505px;
+  margin-bottom: 5px;
+}
+
+.modal-body .message {
+  height: 210px;
+  line-height: 30px;
+  margin-bottom: 15px;
+  padding: 8px 12px;
+  font-size: 22px;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  
+}

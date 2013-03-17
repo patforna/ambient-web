@@ -1,0 +1,22 @@
+<% @title = "Internal: Messages" %>
+<% @internal = true %>
+
+<div class="container">
+	<div class="jumbotron">
+		<h1>Messages</h1>
+		<p class="lead">Total: <%= @messages.count %></p>		
+	</div>
+	<div class="row-fluid">
+      <table class="table table-striped">
+        <tbody>
+  		  <% @messages.each do |message| %>		
+          <tr>
+            <td class="time"><%= message['_id'].generation_time%></td>
+            <td><%= message['email']%></td>
+            <td><%= message['message']%></td>            
+          </tr>
+		  <% end %>
+        </tbody>
+        </table>
+	</div>	
+</div>

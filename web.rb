@@ -4,7 +4,8 @@ require 'json'
 require 'mongo'
 
 configure :development do
-  set :db, Mongo::Connection.new.db('ambient-web').collection('signups')
+  set :signups, Mongo::Connection.new.db('ambient-web').collection('signups')
+  set :messages, Mongo::Connection.new.db('ambient-web').collection('messages')  
 end
 
 configure :production do
@@ -13,7 +14,8 @@ configure :production do
     db_name = db_uri.path.gsub(/^\//, '')
     db_connection = Mongo::Connection.new(db_uri.host, db_uri.port).db(db_name)
     db_connection.authenticate(db_uri.user, db_uri.password) unless (db_uri.user.nil?)
-    set :db, db_connection.collection('signups')
+    set :signups, db_connection.collection('signups')
+    set :messages, db_connection.collection('messages')    
 end
 
 get '/' do
@@ -29,14 +31,23 @@ get '/thanks' do
   erb :index
 end
 
-
 post '/signups' do
-  settings.db.insert({ :email => params[:email] })
+  settings.signups.insert({ :email => params[:email] })
   redirect to('/thanks')
 end
 
 get '/internal/signups' do
-  @signups = settings.db.find.sort({:_id => 1})
+  @signups = settings.signups.find.sort({:_id => 1})
   erb :signups
+end
+
+post '/messages' do
+  settings.messages.insert({ :email => params[:email], :message => params[:message] })
+  redirect to('/')
+end
+
+get '/internal/messages' do
+  @messages = settings.messages.find.sort({:_id => 1})
+  erb :messages
 end
 

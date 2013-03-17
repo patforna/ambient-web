@@ -1,0 +1,18 @@
+<!-- Modal -->
+<div id="contact-us-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <form method="post" action="/messages" class="form-inline">  
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      <h3 id="myModalLabel">Thanks for getting in touch</h3>
+      <p class="lead">Please pop in your email and message and we'll get back to you shortly.</p>
+    </div>
+    <div class="modal-body">
+        <input type="email" name="email" required placeholder="enter@email.com" class="input-xlarge" tabindex=1>
+        <textarea name="message" rows="3" required placeholder="Add your message" class="message input-xlarge" tabindex=2></textarea>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-cancel" data-dismiss="modal" aria-hidden="true" tabindex=4>Cancel</button>
+      <input type="submit" value="Send" class="btn btn-large" tabindex=3>
+    </div>
+  </form>  
+</div>

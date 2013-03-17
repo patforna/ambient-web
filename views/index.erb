@@ -55,14 +55,17 @@
   </div>
   
   <%= erb(:call_to_action, :layout => false) %>  
+  
+  <%= erb(:send_message, :layout => false) %>  <!-- modal -->
 
 </div>
 
 <footer>
   <div class="container">
-    <div class="row-fluid">
-        <h3>Contact Us</h3>			
-    </div>
+    <div class="row-fluid">      
+        <h3><a href="#contact-us-modal" role="button" class="" data-toggle="modal">Get in touch</a></h3>			
+        <h3>Follow us (TBD)</h3>			
+    </div>    
   </div>
 
   <div id="footer-extra">
