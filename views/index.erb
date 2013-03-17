@@ -10,19 +10,22 @@
   </div> -->
 
   <div class="jumbotron">
-    <img src="img/ambient-logo.png" alt="ambient" class="logo">
-    <h1>A <span class="c1">better</span> way to connect with the people around you</h1>    
-    <!-- <p class="lead">We believe that chance encounters don't happen often enough. We all have met someone who, through a simple conversation sparked our interest, made our day or even changed the course of our lives. Yet every day thousands of similar connections do not happen simply because chance didn't have it's way. We think this is crazy and that's why we're building ambient.</p> -->
-    <p class="lead">Remember that time you met someone who, through a simple conversation sparked your interest, made your day and changed the course of your life? What if you could do this every day?</p>
-    <p class="lead">We're making ambient to help you never miss a connection ever again.</p>
+    <img src="img/ambient-logo.png" alt="ambient" class="logo pull-left">
+    <div class="hero">
+      <h1>Connect with the people around you</h1>    
+      <!-- <p class="lead">We believe that chance encounters don't happen often enough. We all have met someone who, through a simple conversation sparked our interest, made our day or even changed the course of our lives. Yet every day thousands of similar connections do not happen simply because chance didn't have it's way. We think this is crazy and that's why we're building ambient.</p> -->
+      <p class="lead clearfix">Remember that time you met someone who, through a simple conversation sparked your interest, made your day or changed the course of your life?</p>
+      <p class="lead">What if this could happen every day?</p>
+    </div>
+    
+    <%= erb(:call_to_action, :layout => false) %>
+        
   </div>
-  
-  <%= erb(:call_to_action, :layout => false) %>
 
   <div id="nearby" class="row-fluid feature">
     <div class="span6 text-center"><img src="img/nearby-screenshot.png"></div>
     <div class="span6 lead">
-      <h2>Find who's around</h2>
+      <h2>Find out who's around you</h2>
       <p>ambient fuses the digital and the real world to provide you with useful, targeted context about the people around you. It's a bit like having little info-bubbles above people's heads.</p>
     </div>
   </div>
@@ -50,14 +53,6 @@
     </div>
     <div class="span6 text-center"><img src="img/chair.png"></div>
   </div>
-
-  <div id="trophy" class="row-fluid feature">
-    <div class="span6 text-center"><img src="img/trophy.png"></div>
-    <div class="span6 lead">
-      <h2>Be first</h2>
-      <p>We're working hard to fill your live with serendipity but we're not quite there yet. Sign up below to be the first one to know when we're ready.</p>
-    </div>
-  </div>      
   
   <%= erb(:call_to_action, :layout => false) %>  
 
@@ -76,9 +71,6 @@
         <div class="span6">
           &copy; 2013 ambient. All rights reserved.
         </div>	        
-        <div class="span6 text-right">
-          <i class="icon-envelope"></i>&nbsp;<a href="mailto:info@discoverambient.com" alt="Email us!">info@discoverambient.com</a>
-        </div>        
       </div>
     </div>
   </div>

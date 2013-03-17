@@ -1,50 +1,38 @@
+body { 
+  background: url(/img/lights.jpg) no-repeat center top; 
+  -webkit-background-size: 100% 800px;
+  -moz-background-size: 100% 800px;
+  -o-background-size: 100% 800px;
+  background-size: 100% 800px;
+}
 
 .hidden {
   display: none;
 }
 
-body {
-  color: #3f4e59;
+body, input {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
 }
+
 h1, h2, h3 {
-  font-family: 'Satisfy', cursive;
   margin: 0;
 }
+
 h1 {
   margin-bottom: 25px;
-  font-size: 4em;
+  font-size: 28px;
   line-height: 1;
   line-height: 0.8;
-  text-align: left;
-
-  
+  text-align: left;  
 }
+
 h2 {
   font-size: 2em;
-  line-height: 0.85;
-  margin: 0 0 15px 0;
-
-  
+  line-height: 1.1;
+  margin: 0 0 15px 0;  
   letter-spacing: -0.005em;
-/*  transform: rotate(2deg);
-  -ms-transform: rotate(2deg); 
-  -webkit-transform: rotate(2deg); 
-  -o-transform: rotate(2deg); 
-  -moz-transform: rotate(2deg);
-*/}
-
-/*
-color: #d3415d;
-color: #e1422c;
-color: #f18330;
-color: #fac832;
-color: #459106;
-color: #235228;
-color: #3299e2;
-color: #0a5094;
-*/
-
-
+}
 
 hr {
   margin: 10px;
@@ -52,7 +40,7 @@ hr {
 
 .container {
   margin: 0 auto;
-  max-width: 720px;
+  max-width: 740px;
 }
 
 .jumbotron {
@@ -60,25 +48,20 @@ hr {
   padding: 20px 0 0 0;
 }
 
+.jumbotron .hero {
+  color: white; 
+  margin-bottom: 50px; 
+}
+
+.jumbotron h1 {
+  margin-left: 220px ;
+  margin-top: 40px;
+  margin-bottom: 70px;
+}
+
 .jumbotron .lead {
-  font-size: 24px;
+  font-size: 36px;
   line-height: 1.25;
-  text-align: left;  
-}
-
-.jumbotron h1 span.c1 {
-  color: #d2405d;
-}
-.jumbotron h1 span.c2 {
-  color: #3299e2;
-}
-.jumbotron h1 span.c3 {
-  color: #459106;
-}
-
-.jumbotron .btn {
-  font-size: 21px;
-  padding: 14px 24px;
 }
 
 .logo {
@@ -88,11 +71,13 @@ hr {
 .feature {
   margin: 0 0 30px 0;
 }
+
 @media only screen and (min-width: 480px) {
   .feature {
     margin: 0 0 40px 0;
   }
 }
+
 @media only screen and (min-width: 768px) {
   .feature {
     margin: 0 0 80px 0;
@@ -101,7 +86,6 @@ hr {
     padding-top: 40px;
   }
 }
-
 
 a.icon  {
   color: #000;
@@ -112,30 +96,27 @@ a.icon:hover{
 }
 
 /* --- call to action --- */
-
-.call-to-action .prompt {  
-  padding: 20px 20px 40px 20px;
-  background: #333;
-  margin-bottom: 10px;
+.call-to-action {
+  margin-left: 0 20px 60px 20px;
+  background: white;  
+  opacity: 0.9;  
+  padding: 40px 50px 50px 50px;  
+  margin-bottom: 200px;
   -webkit-border-radius: 6px;
      -moz-border-radius: 6px;
           border-radius: 6px;  
 }
 
-.call-to-action .prompt h3 {  
-  margin: 0 0 5px 0;
-  line-height: 1.2;
-  font-family: inherit;  
-  color: white;
+.call-to-action h3 { 
+  font-size: 30px; 
+  margin-bottom: 5px;
+  color: #ea2b25;
 }
-.call-to-action .prompt p {  
-  line-height: 1.2;
-}
+
 .call-to-action .lead {
   font-size: 18px;
-  font-style: italic;
-  color: #999;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
+  color: ##59595a;    
 }
 
 input[class=input-xlarge] {
@@ -149,12 +130,14 @@ input[class=input-xlarge] {
      -moz-border-radius: 6px;
           border-radius: 6px;
 }
+
 @media only screen and (min-width: 480px) {
   input[class=input-xlarge] {
     width: 70%;
     margin-right: 5px;
   }
 }
+
 @media only screen and (min-width: 768px) {
   input[class=input-xlarge] {
     margin-bottom: 0;
@@ -165,18 +148,40 @@ input[class=input-xlarge] {
   line-height: 30px;
   padding: 8px 12px;
   font-size: 22px;
+  color: white;
+  background: #616596;  
 }
 
 .form-inline {
   margin: 0;
 }
 
-.uneditable-input {
-  cursor: auto;
+.alert .close {
+  margin-top: -20px;
+}
+
+.alert {
+  color: #59595a;
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: none;
+  text-shadow: none;
+  
 }
 
 .viral-url {
-  margin-top: 10px;
+  width: 400px;
+  margin: 20px auto -20px auto;
+  line-height: 30px;
+  padding: 8px 12px;
+  font-size: 22px;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  background-color: #f1f0f2;
+  border: 1px solid #ccc;
+  border-color: #ccc;
 }
 
 /* area blocks */
@@ -193,15 +198,6 @@ input[class=input-xlarge] {
 #catch-up h2 {
   color: #459106;
 }
-#trophy h2 {
-  color: #f28430;
-}
-
-.call-to-action {
-  margin-bottom: 60px;
-}
-
-
 
 /* --- footer --- */
 
@@ -211,12 +207,14 @@ footer {
   padding: 20px 0 0;
   color: #ccc
 }
+
 footer h3 {
   color: white;
   margin: 0 0 10px 0
 }
 
 #footer-extra {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background: #1c1c1c;
   padding: 10px 0;
   font-size: .9em;
