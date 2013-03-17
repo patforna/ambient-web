@@ -1,10 +1,50 @@
+
 .hidden {
   display: none;
 }
 
+body {
+  color: #3f4e59;
+}
 h1, h2, h3 {
   font-family: 'Satisfy', cursive;
+  margin: 0;
 }
+h1 {
+  margin-bottom: 25px;
+  font-size: 4em;
+  line-height: 1;
+  line-height: 0.8;
+  text-align: left;
+
+  
+}
+h2 {
+  font-size: 2em;
+  line-height: 0.85;
+  margin: 0 0 15px 0;
+
+  
+  letter-spacing: -0.005em;
+/*  transform: rotate(2deg);
+  -ms-transform: rotate(2deg); 
+  -webkit-transform: rotate(2deg); 
+  -o-transform: rotate(2deg); 
+  -moz-transform: rotate(2deg);
+*/}
+
+/*
+color: #d3415d;
+color: #e1422c;
+color: #f18330;
+color: #fac832;
+color: #459106;
+color: #235228;
+color: #3299e2;
+color: #0a5094;
+*/
+
+
 
 hr {
   margin: 10px;
@@ -16,7 +56,8 @@ hr {
 }
 
 .jumbotron {
-  margin: 40px 0;
+  margin-bottom: 30px;
+  padding: 20px 0 0 0;
 }
 
 .jumbotron .lead {
@@ -25,18 +66,42 @@ hr {
   text-align: left;  
 }
 
+.jumbotron h1 span.c1 {
+  color: #d2405d;
+}
+.jumbotron h1 span.c2 {
+  color: #3299e2;
+}
+.jumbotron h1 span.c3 {
+  color: #459106;
+}
+
 .jumbotron .btn {
   font-size: 21px;
   padding: 14px 24px;
 }
 
 .logo {
-  margin-bottom: 25px;
+  margin: 0 0 35px 0;
 }
 
 .feature {
-  margin: 40px 0;
+  margin: 0 0 30px 0;
 }
+@media only screen and (min-width: 480px) {
+  .feature {
+    margin: 0 0 40px 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .feature {
+    margin: 0 0 80px 0;
+  }
+  .feature .lead {
+    padding-top: 40px;
+  }
+}
+
 
 a.icon  {
   color: #000;
@@ -49,9 +114,8 @@ a.icon:hover{
 /* --- call to action --- */
 
 .call-to-action .prompt {  
-  padding-top: 10px;
-  padding-bottom: 25px;  
-  background: #292727;
+  padding: 20px 20px 40px 20px;
+  background: #333;
   margin-bottom: 10px;
   -webkit-border-radius: 6px;
      -moz-border-radius: 6px;
@@ -59,11 +123,14 @@ a.icon:hover{
 }
 
 .call-to-action .prompt h3 {  
+  margin: 0 0 5px 0;
+  line-height: 1.2;
   font-family: inherit;  
   color: white;
-  margin: 0;
 }
-
+.call-to-action .prompt p {  
+  line-height: 1.2;
+}
 .call-to-action .lead {
   font-size: 18px;
   font-style: italic;
@@ -72,14 +139,26 @@ a.icon:hover{
 }
 
 input[class=input-xlarge] {
-  width: 350px;
+  width: 100%;
   height: 30px;
   line-height: 30px;
+  margin-bottom: 15px;
   padding: 8px 12px;
   font-size: 22px;
   -webkit-border-radius: 6px;
      -moz-border-radius: 6px;
           border-radius: 6px;
+}
+@media only screen and (min-width: 480px) {
+  input[class=input-xlarge] {
+    width: 70%;
+    margin-right: 5px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  input[class=input-xlarge] {
+    margin-bottom: 0;
+  }
 }
 
 .btn-large {
@@ -100,6 +179,29 @@ input[class=input-xlarge] {
   margin-top: 10px;
 }
 
+/* area blocks */
+
+#nearby h2 {
+  color: #d3415d;
+}
+#profile h2 {
+  color: #e1422c;
+}
+#privacy h2 {
+  color: #3199e1;
+}
+#catch-up h2 {
+  color: #459106;
+}
+#trophy h2 {
+  color: #f28430;
+}
+
+.call-to-action {
+  margin-bottom: 60px;
+}
+
+
 
 /* --- footer --- */
 
@@ -119,6 +221,9 @@ footer h3 {
   padding: 10px 0;
   font-size: .9em;
   color: #999
+}
+#footer-extra .container {
+  padding-bottom: 60px;
 }
 #footer-extra a {
   color: #999

@@ -11,25 +11,23 @@
 
   <div class="jumbotron">
     <img src="img/ambient-logo.png" alt="ambient" class="logo">
-    <h1>A new way to connect with the people around you</h1>    
-    <p class="lead">We believe that chance encounters don't happen often enough. We all have met someone who, through a simple conversation sparked our interest, made our day or even changed the course of our lives. Yet every day thousands of similar connections do not happen simply because chance didn't have it's way. We think this is crazy and that's why we're building ambient.</p>
+    <h1>A <span class="c1">better</span> way to connect with the people around you</h1>    
+    <!-- <p class="lead">We believe that chance encounters don't happen often enough. We all have met someone who, through a simple conversation sparked our interest, made our day or even changed the course of our lives. Yet every day thousands of similar connections do not happen simply because chance didn't have it's way. We think this is crazy and that's why we're building ambient.</p> -->
+    <p class="lead">Remember that time you met someone who, through a simple conversation sparked your interest, made your day and changed the course of your life? What if you could do this every day?</p>
+    <p class="lead">We're making ambient to help you never miss a connection ever again.</p>
   </div>
   
   <%= erb(:call_to_action, :layout => false) %>
 
-  <hr>
-
-  <div class="row-fluid feature">
+  <div id="nearby" class="row-fluid feature">
     <div class="span6 text-center"><img src="img/nearby-screenshot.png"></div>
     <div class="span6 lead">
-      <h2>Find out who's around</h2>
+      <h2>Find who's around</h2>
       <p>ambient fuses the digital and the real world to provide you with useful, targeted context about the people around you. It's a bit like having little info-bubbles above people's heads.</p>
     </div>
   </div>
 
-  <hr>
-
-  <div class="row-fluid feature">
+  <div id="profile" class="row-fluid feature">
     <div class="span6 lead">
       <h2>Discover unknown connections</h2>
       <p>Find out in what unknown and unexpected ways you are connected with the people around you. See if you like the same music, read the same books, have any common friends, interests and much more&hellip;</p>
@@ -37,9 +35,7 @@
     <div class="span6 text-center"><img src="img/profile-screenshot.png"></div>
   </div>
 
-  <hr>
-
-  <div class="row-fluid feature">
+  <div id="privacy" class="row-fluid feature">
     <div class="span6 text-center"><img src="img/skeleton.png"></div>
     <div class="span6 lead">
       <h2>Control what you share</h2>
@@ -47,27 +43,21 @@
     </div>
   </div>      
 
-  <hr>
-
-  <div class="row-fluid feature">
+  <div id="catch-up" class="row-fluid feature">
     <div class="span6 lead">
-      <h2>Catch up at your convenience</h2>
+      <h2>Catch up at your leisure</h2>
       <p>Yes, it’s great to connect with people, but not all the time.  Do so on your own terms, where and when you want.</p>
     </div>
     <div class="span6 text-center"><img src="img/chair.png"></div>
   </div>
 
-  <hr>
-
-  <div class="row-fluid feature">
+  <div id="trophy" class="row-fluid feature">
     <div class="span6 text-center"><img src="img/trophy.png"></div>
     <div class="span6 lead">
       <h2>Be first</h2>
       <p>We're working hard to fill your live with serendipity but we're not quite there yet. Sign up below to be the first one to know when we're ready.</p>
     </div>
   </div>      
-  
-  <hr>  
   
   <%= erb(:call_to_action, :layout => false) %>  
 
