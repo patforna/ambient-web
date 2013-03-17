@@ -1,9 +1,5 @@
 body { 
   background: url(/img/lights.jpg) no-repeat center top; 
-  -webkit-background-size: 100% 800px;
-  -moz-background-size: 100% 800px;
-  -o-background-size: 100% 800px;
-  background-size: 100% 800px;
 }
 
 .hidden {
@@ -68,10 +64,6 @@ hr {
   margin: 0 0 35px 0;
 }
 
-.feature {
-  margin: 0 0 30px 0;
-}
-
 @media only screen and (min-width: 480px) {
   .feature {
     margin: 0 0 40px 0;
@@ -97,11 +89,10 @@ a.icon:hover{
 
 /* --- call to action --- */
 .call-to-action {
-  margin-left: 0 20px 60px 20px;
+  margin: 0 20px 80px 0;
   background: white;  
   opacity: 0.9;  
   padding: 40px 50px 50px 50px;  
-  margin-bottom: 200px;
   -webkit-border-radius: 6px;
      -moz-border-radius: 6px;
           border-radius: 6px;  
@@ -185,16 +176,35 @@ input[class=input-xlarge] {
 }
 
 /* area blocks */
+.feature {
+  margin: 0 0 45px 0;
+}
+
+#nearby {
+  margin-top: 130px;
+}
+
+#privacy .lead {
+  padding-top: 20px;
+}
+
+#catch-up .lead {
+  padding-top: 20px;
+}
+
 
 #nearby h2 {
   color: #d3415d;
 }
+
 #profile h2 {
   color: #e1422c;
 }
+
 #privacy h2 {
   color: #3199e1;
 }
+
 #catch-up h2 {
   color: #459106;
 }
@@ -204,7 +214,7 @@ input[class=input-xlarge] {
 footer {
   background: #292727;
   margin: 0;
-  padding: 20px 0 0;
+  padding: 10px 0 0;
   color: #ccc
 }
 
