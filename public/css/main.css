@@ -226,12 +226,9 @@ footer h3 {
 #footer-extra {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background: #1c1c1c;
-  padding: 10px 0;
+  padding: 10px 0 0 0;
   font-size: .9em;
   color: #999
-}
-#footer-extra .container {
-  padding-bottom: 60px;
 }
 #footer-extra a {
   color: #999
