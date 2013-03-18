@@ -171,6 +171,13 @@ input[class=input-xlarge] {
   
 }
 
+img.viral-arrow {
+  float:left;
+  position: relative;
+  top:-15px;
+  left:22px
+}
+
 .viral-url {
   width: 400px;
   margin: 27px auto -20px auto;
