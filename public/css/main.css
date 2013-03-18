@@ -138,6 +138,11 @@ input[class=input-xlarge] {
   background: #616596;  
 }
 
+.btn-large:hover {
+  color: white;
+  background: #494c71
+}
+
 .btn-cancel {
   line-height: 30px;
   padding: 8px 12px;
