@@ -88,20 +88,20 @@ hr {
   margin: 0 0 35px 0;
 }
 
-@media only screen and (min-width: 480px) {
+/*@media only screen and (min-width: 480px) {*/
   .feature {
     margin: 0 0 40px 0;
   }
-}
+/*}*/
 
-@media only screen and (min-width: 768px) {
+/*@media only screen and (min-width: 768px) {*/
   .feature {
     margin: 0 0 80px 0;
   }
   .feature .lead {
     padding-top: 40px;
   }
-}
+/*}*/
 
 /* --- call to action --- */
 .call-to-action {
@@ -141,18 +141,18 @@ input[class=input-xlarge] {
           border-radius: 6px;
 }
 
-@media only screen and (min-width: 480px) {
+/*@media only screen and (min-width: 480px) {*/
   input[class=input-xlarge] {
     width: 70%;
     margin-right: 5px;
   }
-}
+/*}*/
 
-@media only screen and (min-width: 768px) {
+/*@media only screen and (min-width: 768px) {*/
   input[class=input-xlarge] {
     margin-bottom: 0;
   }
-}
+/*}*/
 
 .btn-large {
   line-height: 30px;
