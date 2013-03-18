@@ -244,6 +244,10 @@ footer a:hover {
   color: #999
 }
 
+#footer-extra .container {
+  background: #1c1c1c;
+}
+
 /* --- contact us modal box --- */
 #contact-us-modal h3 { 
   font-size: 30px; 
