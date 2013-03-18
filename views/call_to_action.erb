@@ -4,6 +4,7 @@
     <p class="lead">Let us know and we’ll add you to our invite list.</p>
     <form method="post" action="/signups" class="form-inline" >
       <input type="email" name="email" required placeholder="enter@email.com" class="input-xlarge">
+      <% if (@referral_token) %><input type="hidden" name="referred_by" value="<%= @referral_token %>"><% end %>
       <input type="submit" value="Get Invited!" class="btn btn-large">
     </form>
   </div>
@@ -13,7 +14,7 @@
     <h3>Thank You! Want Priority Access?</h3>
     <p class="lead">Get early access by inviting at least 3 friends. The more friends you invite, the sooner you'll get access :)</p>
     <p class="lead">Just copy/paste the URL below into Twitter, Facebook or in an e-mail:</p>
-    <p class="viral-url text-center">http://discoverambient.com/4yc3Xf</p>
+    <p class="viral-url text-center"><%= @viral_url %></p>
   </div>
   <% end %>        
 </div>

@@ -8,13 +8,21 @@
 	</div>
 	<div class="row-fluid">
       <table class="table table-striped">
+        <thead>
+          <tr>
+            <th class="time">Time</th>
+            <th>Email</th>
+            <th>Referrals</th>            
+          </tr> 
+        </thead>
         <tbody>
-  		  <% @signups.each do |signup| %>		
+    		  <% @signups.each do |signup| %>		
           <tr>
             <td class="time"><%= signup['_id'].generation_time%></td>
             <td><%= signup['email']%></td>
+            <td><%= signup['referrals']%></td>            
           </tr>
-		  <% end %>
+  		    <% end %>
         </tbody>
         </table>
 	</div>	

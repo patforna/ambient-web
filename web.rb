@@ -19,21 +19,32 @@ configure :production do
 end
 
 get '/' do
+  @referral_token = params[:ref]
   erb :index
 end
 
-get '/4yc3Xf' do
-  redirect to('/')
+get %r{/(x.*+)} do
+  redirect to("/?ref=#{params[:captures].first}")
 end
 
 get '/thanks' do
+  @viral_url = "http://discoverambient.com/#{params[:ref]}"
   @thanks = true
   erb :index
 end
 
 post '/signups' do
-  settings.signups.insert({ :email => params[:email] })
-  redirect to('/thanks')
+  referral_token = "x" + rand(36**5).to_s(36)
+  doc = { :email => params[:email], :referral_token => referral_token, :referrals => 0 }
+
+  referred_by = params[:referred_by]
+  if (referred_by)
+    doc[:referred_by] = referred_by
+    settings.signups.update({:referral_token => referred_by},{:$inc => {:referrals => 1}})
+  end
+
+  settings.signups.insert(doc)
+  redirect to("/thanks?ref=#{referral_token}")
 end
 
 get '/internal/signups' do
