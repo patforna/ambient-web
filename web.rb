@@ -2,23 +2,29 @@ require 'sinatra'
 require 'sinatra/reloader' if development?
 require 'json'
 require 'mongo'
+require 'dalli'
+require 'rack-cache'
 
 configure :development do
+  $cache = Dalli::Client.new
+  use Rack::Cache, :verbose => true, :metastore => $cache, :entitystore => $cache, :allow_reload => false  
   set :signups, Mongo::Connection.new.db('ambient-web').collection('signups')
   set :messages, Mongo::Connection.new.db('ambient-web').collection('messages')  
 end
 
 configure :production do
-    require 'newrelic_rpm'
-    db_uri = URI.parse(ENV['MONGOHQ_URL'])
-    db_name = db_uri.path.gsub(/^\//, '')
-    db_connection = Mongo::Connection.new(db_uri.host, db_uri.port).db(db_name)
-    db_connection.authenticate(db_uri.user, db_uri.password) unless (db_uri.user.nil?)
-    set :signups, db_connection.collection('signups')
-    set :messages, db_connection.collection('messages')    
+  require 'newrelic_rpm'
+  db_uri = URI.parse(ENV['MONGOHQ_URL'])
+  db_name = db_uri.path.gsub(/^\//, '')
+  db_connection = Mongo::Connection.new(db_uri.host, db_uri.port).db(db_name)
+  db_connection.authenticate(db_uri.user, db_uri.password) unless (db_uri.user.nil?)
+  set :signups, db_connection.collection('signups')
+  set :messages, db_connection.collection('messages')    
+  set :static_cache_control, [:public, :max_age => 60]      
 end
 
 get '/' do
+  cache_control :public, :max_age => 60
   @referral_token = params[:ref]
   erb :index
 end
