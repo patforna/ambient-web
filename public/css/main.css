@@ -7,12 +7,15 @@ body {
 }
 
 body, input, button, textarea {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+/*  font-family: 'Roboto', sans-serif;*/
   font-size: 16px;
+  font-weight: 300;
 }
 
 h1, h2, h3 {
   margin: 0;
+  font-weight: 300;
 }
 
 h1 {
@@ -25,7 +28,7 @@ h1 {
 
 h2 {
   font-size: 2em;
-  line-height: 1.1;
+  line-height: 1.05;
   margin: 0 0 15px 0;  
   letter-spacing: -0.005em;
 }
@@ -77,14 +80,6 @@ hr {
   .feature .lead {
     padding-top: 40px;
   }
-}
-
-a.icon  {
-  color: #000;
-}
-
-a.icon:hover{
-  text-decoration:none;    
 }
 
 /* --- call to action --- */
@@ -218,22 +213,27 @@ input[class=input-xlarge] {
 
 /* --- footer --- */
 
-footer {
+footer {  
   background: #292727;
 }
 
-footer h3 {
-  margin: 5px 0;    
-  color: white;
+.footer {
+  padding: 15px 0 6px 0;
+  background: #292727;  
 }
 
 footer a {
-  color: white;
+  color: white;  
+  font-size: 24px;
 }
 
 footer a:hover {
   color: white;
   text-decoration: none;
+}
+
+.icon {
+  margin-left: 13px;
 }
 
 #footer-extra {
