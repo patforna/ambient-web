@@ -1,5 +1,22 @@
-body { 
-  background: url(/img/lights.jpg) no-repeat center top; 
+/* Large desktop */
+@media (min-width: 1200px) {
+  body { 
+    background: url(/img/lights-3600px.jpg) no-repeat center top; 
+  }
+}
+ 
+/* Landscape phone to portrait and landscape tablet and desktop */
+@media (min-width: 481px) and (max-width: 1199px) {
+  body { 
+    background: url(/img/lights-1200px.jpg) no-repeat center top; 
+  }  
+}
+  
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  body { 
+    background: url(/img/lights-480px.jpg) no-repeat center top; 
+  }  
 }
 
 .hidden {
