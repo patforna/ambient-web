@@ -1,14 +1,25 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title><%= @title %></title>
     <meta name="description" content="ambient helps you connect with the people around you">
     <meta name="viewport" content="width=780">
+    
+    <% if(!@internal) %>
+    <meta property="og:title" content="Discover Ambient"/>
+    <meta property="og:type" content="product"/>
+    <meta property="og:url" content="http://www.discoverambient.com"/>
+    <meta property="og:image" content="http://www.discoverambient.com/img/ambient-avatar.png"/>
+    <meta property="og:site_name" content="Discover Ambient"/>
+    <meta property="og:app_id" content="521464354565007"/>        
+    <meta property="fb:admins" content="559906567"/>
+    <meta property="og:description" content="Remember that time you met someone who, through a simple conversation sparked your interest, made your day or even changed the course of your life? What if this could happen every day?"/>
+    <% end %>
 
     <link rel="canonical" href="http://www.discoverambient.com" />    
     
