@@ -1,4 +1,5 @@
 <% @title = "Discover Ambient" %>
+<%= erb(:fb_tracking, :layout => false, :locals => { :pixel_id => settings.fb_tracking[:launch_page_visit]} ) %>
 
 <div id="heading" class="container">
 
@@ -9,7 +10,7 @@
       <p class="lead clearfix">Connect with people around you who spark your interest, make your day or even change the course of your life.</p>
     </div>
     
-    <%= erb(:call_to_action, :layout => false) %>
+    <%= erb(:call_to_action, :layout => false) %>    
         
   </div>
 </div>

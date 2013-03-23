@@ -8,6 +8,7 @@ require 'rack-cache'
 configure do
   $cache = Dalli::Client.new
   use Rack::Cache, :verbose => true, :metastore => $cache, :entitystore => $cache, :allow_reload => false  
+  set :fb_tracking, {:launch_page_visit => '6006195517954', :email_signup => '6006195574754'}
 end
 
 configure :development do

@@ -19,5 +19,6 @@
       <p class="viral-url text-center"><%= @viral_url %></p>
     </div>
   </div>
+  <%= erb(:fb_tracking, :layout => false, :locals => { :pixel_id => settings.fb_tracking[:email_signup]} ) %>
   <% end %>        
 </div>
