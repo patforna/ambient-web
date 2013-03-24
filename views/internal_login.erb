@@ -1,0 +1,26 @@
+<% @title = "Internal: Signups" %>
+<% @internal = true %>
+
+<div class="container">
+	<div class="row">
+      <form method="post" class="form-horizontal" action="/internal/dologin">
+        <div class="control-group">
+          <label class="control-label" for="inputEmail">Name</label>
+          <div class="controls">
+            <input type="text" placeholder="Name" name="name">
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="inputPassword">Password</label>
+          <div class="controls">
+            <input type="password" placeholder="Password" name="password">
+          </div>
+        </div>
+        <div class="control-group">
+          <div class="controls">
+            <input type="submit" value="Login" class="btn btn-success">
+          </div>
+        </div>
+      </form>	
+  </div>
+</div>

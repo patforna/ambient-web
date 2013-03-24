@@ -57,18 +57,53 @@ post '/signups' do
   redirect to("/thanks?ref=#{referral_token}")
 end
 
-get '/internal/signups' do
-  @signups = settings.signups.find.sort({:_id => 1})
-  erb :signups
-end
-
 post '/messages' do
   settings.messages.insert({ :email => params[:email], :message => params[:message] })
   redirect to('/')
 end
 
-get '/internal/messages' do
-  @messages = settings.messages.find.sort({:_id => 1})
-  erb :messages
+###########################################################################################
+# Internal pages:
+
+def isAdminUser()
+  return request.cookies["isAmbientAdmin"] == "UgjgTUYFDWFnklwdwdKJHFHBFDDnDYS"
 end
+
+get '/internal/signups' do
+  if isAdminUser()
+    @signups = settings.signups.find.sort({:_id => 1})
+    erb :signups
+  else 
+    redirect "/internal/login"
+  end
+end
+
+get '/internal' do
+  if isAdminUser()
+    erb :internal_home
+  else 
+    redirect "/internal/login"
+  end
+end
+
+get '/internal/login' do
+  erb :internal_login
+end
+
+post '/internal/dologin' do
+  if params['name'] == "admin" && params['password'] == "ycombinator"
+    response.set_cookie("isAmbientAdmin", "UgjgTUYFDWFnklwdwdKJHFHBFDDnDYS")
+  end
+  redirect "/internal"
+end
+
+get '/internal/messages' do
+  if isAdminUser()
+    @messages = settings.messages.find.sort({:_id => 1})
+    erb :messages
+  else 
+    redirect "/internal/login"
+  end
+end
+
 
