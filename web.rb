@@ -48,6 +48,11 @@ post '/signups' do
     redirect back        
   end
   
+  existing_signup = settings.signups.find({ :email => /^#{params[:email]}$/i }).next
+  if (existing_signup)
+    redirect to("/thanks?ref=#{existing_signup['referral_token']}")    
+  end
+  
   referral_token = "x" + rand(36**5).to_s(36)
   doc = { :email => params[:email], :referral_token => referral_token, :referrals => 0 }
 
@@ -58,6 +63,7 @@ post '/signups' do
   end
 
   settings.signups.insert(doc)
+  
   redirect to("/thanks?ref=#{referral_token}")
 end
 
