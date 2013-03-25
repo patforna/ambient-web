@@ -6,6 +6,7 @@ $(document).on('submit', '.call-to-action form', function(event) {
       var snippet = $($(response).find('.call-to-action')).first().html();
       callToActionBox.replaceWith(snippet);
 	  _gaq.push(['_trackEvent', 'action', 'signup']);
+	  mixpanel.track('signup');
     })
 
     return false;
@@ -17,9 +18,11 @@ $(document).on('closed', '.alert', function() {
 
 $(document).on('click', '.icon-facebook', function() {
   _gaq.push(['_trackEvent', 'action', 'social', 'facebook']);
+  mixpanel.track('social-facebook');
 });
 
 $(document).on('click', '.icon-twitter', function() {
   _gaq.push(['_trackEvent', 'action', 'social', 'twitter']);
+  mixpanel.track('social-twitter');
 });
 
