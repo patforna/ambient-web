@@ -82,7 +82,7 @@ end
 get '/internal/signups' do
   if isAdminUser()
     @signups = settings.signups.find.sort({:_id => -1})
-    erb :signups
+    erb :signups, :layout => :layout_internal
   else 
     redirect "/internal/login"
   end
@@ -90,14 +90,14 @@ end
 
 get '/internal' do
   if isAdminUser()
-    erb :internal_home
+    erb :internal_home, :layout => :layout_internal
   else 
     redirect "/internal/login"
   end
 end
 
 get '/internal/login' do
-  erb :internal_login
+  erb :internal_login, :layout => :layout_internal
 end
 
 post '/internal/dologin' do
@@ -110,7 +110,7 @@ end
 get '/internal/messages' do
   if isAdminUser()
     @messages = settings.messages.find.sort({:_id => -1})
-    erb :messages
+    erb :messages, :layout => :layout_internal
   else 
     redirect "/internal/login"
   end
