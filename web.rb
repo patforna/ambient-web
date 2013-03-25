@@ -44,6 +44,10 @@ get '/thanks' do
 end
 
 post '/signups' do
+  if (params[:email].strip.empty?)
+    redirect back        
+  end
+  
   referral_token = "x" + rand(36**5).to_s(36)
   doc = { :email => params[:email], :referral_token => referral_token, :referrals => 0 }
 
