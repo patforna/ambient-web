@@ -1,15 +1,19 @@
+$(document).ready(function() {
+  mixpanel.track('page viewed', {'page name' : document.title, 'url' : window.location.pathname}); 
+});
+
 $(document).on('submit', '.call-to-action form', function(event) {
   
-    var callToActionBox = $(this).parent()
-  
-    $.post(this.action, $(this).serialize(), function(response) {
-      var snippet = $($(response).find('.call-to-action')).first().html();
-      callToActionBox.replaceWith(snippet);
-	  _gaq.push(['_trackEvent', 'action', 'signup']);
-	  mixpanel.track('signup');
-    })
+  var callToActionBox = $(this).parent()
 
-    return false;
+  $.post(this.action, $(this).serialize(), function(response) {
+    var snippet = $($(response).find('.call-to-action')).first().html();
+    callToActionBox.replaceWith(snippet);
+    _gaq.push(['_trackEvent', 'action', 'signup']);
+    mixpanel.track('signup');
+  })
+
+  return false;
 });
 
 $(document).on('closed', '.alert', function() {
